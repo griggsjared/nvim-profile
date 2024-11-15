@@ -10,7 +10,8 @@ return {
   },
 	config = function()
     require("neo-tree").setup({
-       filesystem = {
+      transparent_background = true,  
+      filesystem = {
         filtered_items = {
           visible = true,
           show_hidden_count = true,
