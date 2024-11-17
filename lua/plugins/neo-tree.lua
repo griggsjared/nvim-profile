@@ -10,7 +10,7 @@ return {
   },
 	config = function()
     require("neo-tree").setup({
-      transparent_background = true,  
+      transparent_background = true,
       filesystem = {
         filtered_items = {
           visible = true,
@@ -21,12 +21,12 @@ return {
             -- add extension names you want to explicitly exclude
             '.git',
             '.DS_Store',
-            'thumbs.db',  
+            'thumbs.db',
           },
           never_show = {}
         },
       },
     })
-    vim.keymap.set("n", "<C-n>", "<CMD>Neotree toggle<CR>", {})   
+    vim.keymap.set("n", "<C-n>", "<CMD>Neotree toggle<CR>", {})
 	end,
 }

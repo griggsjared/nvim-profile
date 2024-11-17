@@ -1,21 +1,16 @@
 return {
- -- {
- --   "navarasu/onedark.nvim",
- --   lazy = false,
- --   name = "onedark",
- --   config = function()
- --     require('onedark').setup {
- --       style = 'warmer'
- --     }
- --     require('onedark').load()
- --   end,
- -- }
   {
     "loctvl842/monokai-pro.nvim",
     lazy = false,
-    config = function() 
+    config = function()
       require("monokai-pro").setup({
-        transparent_background = true
+        transparent_background = true,
+        opts = {
+      		integrations = {
+    			  cmp = true,
+      			treesitter = true,
+      		},
+      	}
       })
       vim.cmd([[colorscheme monokai-pro]])
     end,
