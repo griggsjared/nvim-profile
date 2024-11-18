@@ -44,9 +44,6 @@ return {
   {
     "williamboman/mason.nvim",
     lazy = false,
-    config = function()
-      require("mason").setup()
-    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -59,10 +56,23 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
+
+      require("mason").setup()
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "html",
+          "cssls",
+          "tailwindcss",
+          "intelephense",
+          "lua_ls",
+          "ts_ls",
+          "gopls",
+        },
+      })
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({
-        caapabilities = capabilities,
+        capabilities = capabilities,
         settings = {
           Lua = {
             diagnostics = {
@@ -78,6 +88,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.cssls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.tailwindcss.setup({
         capabilities = capabilities,
       })
       lspconfig.intelephense.setup({
@@ -104,3 +117,4 @@ return {
     end,
   },
 }
+

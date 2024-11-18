@@ -13,3 +13,7 @@ vim.opt.swapfile = false
 vim.wo.number = true
 vim.wo.relativenumber = false
 
+vim.opt.title = true
+vim.opt.titlelen = 0 -- do not shorten title
+vim.opt.titlestring = 'nvim %{expand("%:p")}'
+
