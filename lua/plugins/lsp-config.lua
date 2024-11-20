@@ -66,6 +66,7 @@ return {
           "intelephense",
           "lua_ls",
           "ts_ls",
+          "volar",
           "gopls",
         },
       })
@@ -88,6 +89,9 @@ return {
         capabilities = capabilities,
       })
       lspconfig.cssls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.volar.setup({
         capabilities = capabilities,
       })
       lspconfig.tailwindcss.setup({
