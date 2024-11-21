@@ -99,6 +99,7 @@ return {
       })
       lspconfig.intelephense.setup({
         capabilities = capabilities,
+        filetypes = { "php", "blade" },
       })
       lspconfig.gopls.setup({
         capabilities = capabilities,
