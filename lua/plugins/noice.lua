@@ -1,19 +1,10 @@
 return {
   {
-    "rcarriga/nvim-notify",
-    config = function()
-      require("notify").setup({
-        stages = "fade_in_slide_out",
-        background_colour = "#000000",
-      })
-    end
-  },
-  {
     "folke/noice.nvim",
     event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
+      -- "rcarriga/nvim-notify",
     },
     config = function()
       require("noice").setup({

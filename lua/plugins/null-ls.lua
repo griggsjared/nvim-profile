@@ -50,6 +50,8 @@ return {
             })
           end,
         }),
+        null_ls.builtins.formatting.goimports,
+        null_ls.builtins.formatting.gofmt,
         -- require("none-ls.diagnostics.eslint_d").with({
         --   prefer_local = "node_modules/.bin",
         --   condition = function(utils)

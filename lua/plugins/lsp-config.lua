@@ -34,7 +34,7 @@ return {
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
-					{ name = "luasnip" }, -- For luasnip users.
+					{ name = "luasnip" },
 				}, {
 					{ name = "buffer" },
 				}),
@@ -67,10 +67,6 @@ return {
 					"ts_ls",
 					"volar",
 					"gopls",
-					-- "prettier",
-					-- "eslint_d",
-					-- "stylua",
-					-- "pint",
 				},
 			})
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -90,6 +86,7 @@ return {
 			})
 			lspconfig.html.setup({
 				capabilities = capabilities,
+        filetypes = { "html", "templ", "blade" },
 			})
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
@@ -107,7 +104,7 @@ return {
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
 				cmd = { "gopls" },
-				filetypes = { "go", "gomod", "gowork", "gotmpl", "templ" },
+				filetypes = { "go", "gomod", "gowork", "gotmpl"},
 				settings = {
 					gopls = {
 						completeUnimported = true,
@@ -118,6 +115,9 @@ return {
 					},
 				},
 			})
+      lspconfig.templ.setup({
+        capabilities = capabilities,
+      })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})

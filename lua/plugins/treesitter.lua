@@ -8,9 +8,21 @@ return {
         auto_install = true,
         highlight = { enable = true },
         indent = { enable = true },
+        ensure_installed = {
+          "php_only",
+          "php",
+          "html",
+          "css",
+          "javascript",
+          "typescript",
+          "json",
+          "lua",
+          "go",
+          "templ"
+        }
       })
 
-      -- Manually installing the Blade parser
+      -- Manually installing the Blade parser:
       local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
       parser_config.blade = {
         install_info = {
