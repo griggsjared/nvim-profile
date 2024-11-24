@@ -86,10 +86,30 @@ return {
 			})
 			lspconfig.html.setup({
 				capabilities = capabilities,
-        filetypes = { "html", "templ", "blade" },
+        filetypes = { "html", "templ", "blade", "vue" },
 			})
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
+        settings = {
+          css = {
+            validate = true,
+            lint = {
+              unknownAtRules = "ignore",
+            },
+          },
+          scss = {
+            validate = true,
+            lint = {
+              unknownAtRules = "ignore",
+            },
+          },
+          less = {
+            validate = true,
+            lint = {
+              unknownAtRules = "ignore",
+            },
+          },
+        },
 			})
 			lspconfig.volar.setup({
 				capabilities = capabilities,

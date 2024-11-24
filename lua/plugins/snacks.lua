@@ -17,8 +17,16 @@ return {
       sections = {
         { section = "header" },
         { section = "keys", gap = 1, padding = 1 },
-        { pane = 2, icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-        { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+        { section = "startup" },
+        {
+          pane = 2,
+          icon = " ",
+          title = "Working Directory",
+          section = "terminal",
+          cmd = "pwd",
+          height = 1,
+          padding = 1,
+        },
         {
           pane = 2,
           icon = " ",
@@ -31,7 +39,8 @@ return {
           ttl = 5 * 60,
           indent = 3,
         },
-        { section = "startup" },
+        { pane = 2, icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+        { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
       },
     },
   },
