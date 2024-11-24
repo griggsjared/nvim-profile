@@ -17,15 +17,19 @@ return {
       require("monokai-pro").setup({
         transparent_background = true,
         opts = {
-      		integrations = {
-    			  cmp = true,
-      			treesitter = true,
+          integrations = {
+            cmp = false,
+            treesitter = true,
             telescope = true,
-      		},
-      	}
+          },
+        },
       })
+
+      -- vim.cmd([[autocmd! ColorScheme * highlight NormalFloat guibg=#1e1e1e]])
+      -- vim.cmd([[autocmd! ColorScheme * highlight FloatBorder guifg=#ffffff guibg=#1e1e1e]])
+      vim.cmd([[autocmd! ColorScheme * highlight FloatBorder guifg=#ffffff]])
+
       vim.cmd([[colorscheme monokai-pro]])
     end,
-  }
+  },
 }
-

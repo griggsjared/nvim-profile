@@ -15,20 +15,33 @@ return {
     dashboard = {
       enabled = true,
       sections = {
-        { section = "header" },
-        { section = "keys", gap = 1, padding = 1 },
-        { section = "startup" },
         {
-          pane = 2,
+         -- section = "header",
+          header = [[
+▄▄    ▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄ ▄▄   ▄▄
+█  █  █ █       █       █  █ █  █   █  █▄█  █
+█   █▄█ █    ▄▄▄█   ▄   █  █▄█  █   █       █
+█       █   █▄▄▄█  █ █  █       █   █       █
+█  ▄    █    ▄▄▄█  █▄█  █       █   █       █
+█ █ █   █   █▄▄▄█       ██     ██   █ ██▄██ █
+█▄█  █▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█ █▄▄▄█ █▄▄▄█▄█   █▄█]],
+          padding = 1,
+          gap = 1,
+          fg = "#FFFFFF",
+        },
+        { section = "startup", gap = 1, padding = 1 },
+        {
           icon = " ",
           title = "Working Directory",
           section = "terminal",
           cmd = "pwd",
           height = 1,
           padding = 1,
+          ttl = 5 * 60,
+          indent = 3,
         },
+        { section = "keys", gap = 1, padding = 1 },
         {
-          pane = 2,
           icon = " ",
           title = "Git Status",
           section = "terminal",
@@ -39,8 +52,8 @@ return {
           ttl = 5 * 60,
           indent = 3,
         },
-        { pane = 2, icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-        { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+        -- { pane = 2, icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1, fg = "#FFFFFFF" },
+        -- { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
       },
     },
   },
