@@ -25,7 +25,6 @@ return {
         },
       })
 
-      -- vim.cmd([[autocmd! ColorScheme * highlight NormalFloat guibg=#1e1e1e]])
       -- vim.cmd([[autocmd! ColorScheme * highlight FloatBorder guifg=#ffffff guibg=#1e1e1e]])
       vim.cmd([[autocmd! ColorScheme * highlight FloatBorder guifg=#ffffff]])
 
