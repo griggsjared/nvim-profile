@@ -8,24 +8,24 @@ return {
         "RainbowYellow",
         "RainbowOrange",
         "RainbowGreen",
-        "RainbowViolet",
+        "RainbowBlue",
         "RainbowCyan",
       }
 
       local inactive_highlight = {
-        "InactiveRainbowBlack",
+        "InactiveBlack",
       }
 
       local hooks = require("ibl.hooks")
 
       hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-        vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#e96b8d" })
-        vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#f8e579" })
-        vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#ee985f" })
-        vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#91d595" })
-        vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#928adc" })
-        vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#7bd1e3" })
-        vim.api.nvim_set_hl(0, "InactiveRainbowBlack", { fg = "#3f3d40" })
+        vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#ff6188" })
+        vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#ffd866" })
+        vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#fc9867" })
+        vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#a9dc76" })
+        vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#ab9df2" })
+        vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#78dce8" })
+        vim.api.nvim_set_hl(0, "InactiveBlack", { fg = "#3f3d40" })
       end)
 
       require("ibl").setup({

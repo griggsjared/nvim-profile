@@ -18,8 +18,8 @@ return {
           "json",
           "lua",
           "go",
-          "templ"
-        }
+          "templ",
+        },
       })
 
       -- Manually installing the Blade parser:
@@ -34,10 +34,13 @@ return {
       }
 
       vim.filetype.add({
-          pattern = {
-              [".*%.blade%.php"] = "blade",
-          },
+        pattern = {
+          [".*%.blade%.php"] = "blade",
+        },
       })
-    end
-  }
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+  },
 }

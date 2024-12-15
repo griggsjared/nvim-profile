@@ -4,10 +4,10 @@ return {
   lazy = false,
   opts = {
     notifier = { enabled = true },
-    quickfile = { enabled = true },
     statuscolumn = { enabled = true },
     dashboard = {
       enabled = true,
+      width = 80,
       sections = {
         {
           header = [[
@@ -20,7 +20,6 @@ return {
 █▄█  █▄▄█▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█ █▄▄▄█ █▄▄▄█▄█   █▄█]],
           padding = 1,
           gap = 1,
-          fg = "#FFFFFF",
         },
         { section = "startup", gap = 1, padding = 1 },
         {
@@ -47,5 +46,8 @@ return {
         },
       },
     },
+  },
+  keys = {
+    { "<leader>sd", "<CMD>lua Snacks.dashboard()<CR>", desc = "Show the dashboard" },
   },
 }
