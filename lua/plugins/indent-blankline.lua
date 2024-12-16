@@ -4,28 +4,29 @@ return {
     main = "ibl",
     config = function()
       local highlight = {
-        "RainbowRed",
-        "RainbowYellow",
-        "RainbowOrange",
-        "RainbowGreen",
-        "RainbowBlue",
-        "RainbowCyan",
+        "IndentRed",
+        "IndentYellow",
+        "IndentOrange",
+        "IndentGreen",
+        "IndentMagenta",
+        "IndentCyan",
       }
 
       local inactive_highlight = {
-        "InactiveBlack",
+        "IndentInactive",
       }
 
       local hooks = require("ibl.hooks")
+      local palette = require("monokai-pro.override")
 
       hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-        vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#ff6188" })
-        vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#ffd866" })
-        vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#fc9867" })
-        vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#a9dc76" })
-        vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#ab9df2" })
-        vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#78dce8" })
-        vim.api.nvim_set_hl(0, "InactiveBlack", { fg = "#3f3d40" })
+        vim.api.nvim_set_hl(0, "IndentRed", { fg = palette.red })
+        vim.api.nvim_set_hl(0, "IndentYellow", { fg = palette.yellow })
+        vim.api.nvim_set_hl(0, "IndentOrange", { fg = palette.orange })
+        vim.api.nvim_set_hl(0, "IndentGreen", { fg = palette.green })
+        vim.api.nvim_set_hl(0, "IndentMagenta", { fg = palette.magenta })
+        vim.api.nvim_set_hl(0, "IndentCyan", { fg = palette.cyan })
+        vim.api.nvim_set_hl(0, "IndentInactive", { fg = palette.dimmed4 })
       end)
 
       require("ibl").setup({
