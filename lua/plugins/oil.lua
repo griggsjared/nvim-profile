@@ -6,11 +6,13 @@ return {
     config = function()
       require("oil").setup({
         icons = require("mini.icons"),
+        default_file_explorer = true,
+        delete_to_trash = true,
+        skip_confirm_for_simple_edits = true,
         view_options = {
           show_hidden = true,
           is_always_hidden = function(name)
             local black_list = {
-              "node_modules",
               ".git",
               ".DS_Store",
             }
